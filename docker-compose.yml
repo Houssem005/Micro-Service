@@ -1,0 +1,35 @@
+version: "2.7"
+services:
+ 
+
+ 
+  fournisseur:
+    container_name: fournisseur
+    build: C:\Workspace\Fournisseur
+    ports:
+      - "8055:8055"
+    hostname: fournisseur
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_2:3306/fournisseur?autoReconnect=true&useSSL=false
+     
+    image: "fournisseur"
+    depends_on:
+      - mysql_2
+  
+  mysql_2:
+    image: "mysql:5.6"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=fournisseur
+    ports:
+      - 3308:3306
+     
+  discovery:
+    build: C:\Workspace\EurekaServer
+    ports:
+      - "8761:8761"
+    image: "discovery-service"
+  
+  
+  
