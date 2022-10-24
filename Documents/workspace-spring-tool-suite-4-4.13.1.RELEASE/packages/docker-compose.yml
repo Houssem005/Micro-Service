@@ -1,0 +1,40 @@
+version: "2.7.5"
+services:
+ 
+
+ 
+  packages:
+    container_name: package-service
+    build: C:\Users\DELL\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\packages
+    ports:
+      - "8081:8081"
+    hostname: packages
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql_3:3306/pk?autoReconnect=true&useSSL=false
+     
+    image: "maisonhotetest"
+    depends_on:
+      - mysql_3
+ 
+ 
+  
+  
+   
+
+     
+ 
+  mysql_3:
+    image: "mysql:5.6"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=pk
+    ports:
+      - 3309:3308        
+ 
+     
+  discovery:
+    build: C:\Users\DELL\Documents\workspace-spring-tool-suite-4-4.13.1.RELEASE\EurekaApplication
+    ports:
+      - "8761:8761"
+    image: "discovery-service"    
