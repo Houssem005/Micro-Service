@@ -6,19 +6,19 @@
 
    #### Gestion des produits
 
-Gestion des produits: Ajout , modification , affichage et suppression , filtrer produits,
+       Gestion des produits: Ajout , modification , affichage et suppression , filtrer produits,
 
    #### Gestion des fournisseurs
 
-Gestion des fournisseurs: Ajout , modification , affichage et suppression , filtrer produits,
+        Gestion des fournisseurs: Ajout , modification , affichage et suppression , filtrer produits,
 
    #### Gestion des livreurs
 
-Gestion des livreurs: Ajout , modification , affichage et suppression , filtrer produits,
+       Gestion des livreurs: Ajout , modification , affichage et suppression , filtrer produits,
 
    #### Gestion des packages
 
-Gestion des packages: Ajout , modification , affichage et suppression , filtrer produits,
+        Gestion des packages: Ajout , modification , affichage et suppression , filtrer produits,
 
    #### Gestion des réclamation
-Gestion des réclamations: Ajout , modification , affichage et suppression , filtrer produits,
+        Gestion des réclamations: Ajout , modification , affichage et suppression , filtrer produits,
