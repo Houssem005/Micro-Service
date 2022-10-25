@@ -22,3 +22,8 @@
 
    #### Gestion des réclamation
         Gestion des réclamations: Ajout , modification , affichage et suppression , filtrer produits,
+
+
+
+![Capture](https://user-images.githubusercontent.com/79277235/197841305-0ac323b4-ca6f-4886-ae37-12809b441625.PNG)
+
