@@ -3,6 +3,7 @@ package com.esprit.Produit.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.esprit.Produit.Entity.Produit;
 import com.esprit.Produit.Service.IProduitService;
 import com.esprit.Produit.Service.ProduitService;
+
 
 
 @CrossOrigin(origins="*")
@@ -52,11 +54,12 @@ public class ProduitRestApi {
 	 public void removeproduit(@PathVariable("produit-id") Long produitId) {
 	 produitService.deleteProduit(produitId);
 	 }
+	 
 	 // http://localhost:8081/SpringMVC/produit/modify-produit
-	 @PutMapping("/modify-produit")
+	 @PutMapping("/modify-produit/{id}")
 	 @ResponseBody
-	 public Produit modifyproduit(@RequestBody Produit produit) {
-	 return produitService.updateProduit(produit);
+	 public Produit modifyproduit(@PathVariable("id") int id,@RequestBody Produit produit) {
+	 return produitService.updateProduit(id,produit);
 	 }
-	
+		
 }
