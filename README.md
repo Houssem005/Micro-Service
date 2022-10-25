@@ -22,8 +22,8 @@
 
    #### Gestion des réclamation
         Gestion des réclamations: Ajout , modification , affichage et suppression , filtrer produits,
+        
+   ## Architecture de la plateforme
 
-
-
-![Capture](https://user-images.githubusercontent.com/79277235/197841305-0ac323b4-ca6f-4886-ae37-12809b441625.PNG)
+![Capture](https://user-images.githubusercontent.com/79277235/197841692-be3149a4-06d7-4fac-a8e7-58ccb43f80b6.PNG)
 
