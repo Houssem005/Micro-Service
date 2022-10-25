@@ -11,6 +11,6 @@ public interface IProduitService {
 	Produit addProduit(Produit p);
 	Produit retrieveProduit(Long id);
 	void deleteProduit(Long id);
-	Produit updateProduit(Produit p);
+	Produit updateProduit(int id,Produit p);
 
 }

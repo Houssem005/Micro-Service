@@ -49,7 +49,7 @@ public class ProduitService  implements IProduitService {
 	
 
 	@Override
-	public Produit updateProduit(Produit p) {
+	public Produit updateProduit(int id,Produit p) {
 		return produitRepository.save(p);
 	}
 	}
