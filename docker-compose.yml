@@ -1,0 +1,39 @@
+version: "2.7"
+services:
+
+
+  delivery:
+   
+    build:  C:\Workspace Spring\Delivery
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka/
+    ports:
+      - "8092:8081"
+    image: "delivery-service"
+   
+  angular-service: # The name of the service
+    container_name: angularcontainer  # Container name
+    build: C:\Users\abidi\Desktop\light-bootstrap-dashboard-angular2-master # Location of our Dockerfile
+    volumes: # Volume binding
+        - './angular:/appc' 
+    ports: 
+        - '4200:4200' # Port mapping
+    command: > 
+        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+  userservicemongo:
+    build : C:\Users\abidi\Desktop\CrudLoginUser-master - Copie
+    ports:
+      - "5000:5000"
+    environment:
+     - eureka.client.serviceUrl.defaultZone=http://discovery:8761/eureka
+    command: npm start
+   
+    image : userservicemongo
+    depends_on:
+      -  discovery   
+
+  discovery:
+    build: C:\Workspace Spring\Eureka
+    ports:
+      - "8761:8761"
+    image: "eureka-service"
