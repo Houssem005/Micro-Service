@@ -1,2 +1,2 @@
 # Eureka-discovery
-### Eureka Server for discovering ERP different clients (microservices)
+### Le serveur de découverte pour décourvrir les differents clients (microservices)
